@@ -253,16 +253,7 @@ In Depth:
                Because of the rebase, as far as git is concerned bug fix started at v3 not v1.
                Rebasing has a few more steps / being the sense stuff but this shows the basics
 
-          <--- EXTREAMLY HELPFUL DIAGRAM WAS HERE --->
-               <-- no seriously the diagram that was here mad all this
-                    make sense to me so if by some off chance you are
-                    browsing and find this and are having trouble with
-                    rebase email the following message to rorysterley@gmail.com
-                    "Hay Rory I am having trouble understanding git rebase and
-                    would like to see the diagram that help you. <The Rory says: its in my Evernote: Git/git basics > 'This is a
-                    direct quotation from you(Rory) including this line."
-          <---  IN ALL SIRIOUSNESS, I IT REALY HELPED SO IF YOU ARE HAVEING
-          <---  TROUBLE WITH UNDERSTANDING WHAT GIT REBASE DOES. ASK ME!
+          <--- Awesome diagram was here --->
 
 
 
