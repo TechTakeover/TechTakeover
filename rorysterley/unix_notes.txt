@@ -81,8 +81,10 @@ ls  list what is in the current directory
    -r   revers order
    -a   shows hidden files (.)
    -x   prints info horizontally
+touch  (updattes time stamp on files and creates them if they don't exist)
 In fish:
 la = ls -lah     and possibly some more stuff
+
 
 Note: Escape a space '\ '
     ex: cd ~/My Pics    ERROR: ~/My does not exist
