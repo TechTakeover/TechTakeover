@@ -2,13 +2,13 @@ $ git help <command>
 
 
 Do NOT do this #############-HTTPS-################################
-#     $ git remote add origin https://github.com/rorysterley/<repo name>.git    #
-#     $ git push -u origin master                                                                           #
+#    $ git remote add origin https://github.com/rorysterley/<repo name>.git
+#    $ git push -u origin master
 ###############################################################
 
 Do This ##################-SSH-###############################
-#     $ git remote add origin git@github.com:rorysterley/<repo name>.git     #
-#     $ git push -u origin master                                                                       #
+#    $ git remote add origin git@github.com:rorysterley/<repo name>.git     #
+#    $ git push -u origin master                                            #
 #############################################################
      The “-u” is optional and makes it so next time you run “$ git push” you don’t need <name> and <branch>
 

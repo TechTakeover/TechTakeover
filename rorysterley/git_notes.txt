@@ -1,0 +1,21 @@
+ Git
+=====
+
+Distributed Version Control System (VCS)
+
+================================================
+=   MAN PAGES NOTE ------------------!!!!!!!!!!
+=
+=   $ man git
+=   $ man git-config   (NOT: $ man git -config)
+================================================
+
+If you are pulling a repo you don't need to run $ git init
+
+
+Commands:
+=========
+git add <file>
+git add .     (adds everything in the current directory and sub-directory)
+
+git rm --cached <file>          (un-stage a file)
