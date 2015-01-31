@@ -385,3 +385,12 @@ cd applications
 cd Desktop
  cd programs
 programs
+
+
+la (list all)
+git init (creates git repository)
+ls (list)
+
+ls -o (list removing group column)
+
+
