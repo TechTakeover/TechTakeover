@@ -8,7 +8,7 @@ echo $PATH             (Checking the value of $PATH)
 lsla
 lsl
 cd /User
-c
+c                      (Testing to see if 'c' was a command)
 cd
 la
 man ls
