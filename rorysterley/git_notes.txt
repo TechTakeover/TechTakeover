@@ -62,3 +62,7 @@ Labels
 HEAD (points to the most resent commit or the checkout branch)
 master (The master branch)
 git-notes (a branch)
+
+For more detailed notes see: 'evernote_git_basics.txt' in this same folder.
+
+Now go play with the Octocat!
