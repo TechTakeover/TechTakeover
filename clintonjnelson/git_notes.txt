@@ -61,7 +61,7 @@ Git - REMOTES
 
 $ git push origin master    // pushes TO the ORIGIN's MASTER. It pushes the stuff in whatever BRANCH you're in. It only sends the timeline. To push a branch to a branch, be IN the branch you want, and tell it to send to the same-named ORIGIN BRANCH.
 
-$ git push -u origin master   // "-u" sets this up as the default tracking/pushing branch, so can in future just type "git push". DO THIS WHEN YOU PUSH TO A NEW TRACKING BRANCH ON GITHUB. This creates a matching branch name on the GitHub.
+$ git push -u origin <newBranch>   // "-u" sets this up as the default tracking/pushing branch, so can in future just type "git push". DO THIS WHEN YOU PUSH TO A NEW TRACKING BRANCH ON GITHUB. This creates a matching branch name on the GitHub.
 
 
 
