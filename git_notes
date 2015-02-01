@@ -34,5 +34,8 @@ git branch (create branches)
 
 git checkout branch_name (switch branches)
 
+keep base branch as master change to new branch on compare
 
+Solo project: Git Merge
+Team Project: Pull Request
 
