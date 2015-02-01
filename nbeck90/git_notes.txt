@@ -1,0 +1,22 @@
+Any time you make or change a file, it will be untracked
+until it is added and commited to git.
+
+the .git file is a hidden file that handles all request details.
+
+git add will add your file to the staging area
+
+git commit will push it from the staging area and will
+include author, timestamp, differences, etc.
+
+git status will give you the status of the staging area
+
+you want a clean staging area, that's when the red x will turn
+into a check mark.
+
+git pull will pull from a github repo and give you the master
+version.
+
+SOLO PROJECT GIT MERGE
+TEAM PORJECT PULL REQUEST
+
+HEAD will always be on the current branch you are working on
