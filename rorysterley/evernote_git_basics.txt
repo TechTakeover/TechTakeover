@@ -1,0 +1,393 @@
+$ git help <command>
+
+
+Do NOT do this #############-HTTPS-################################
+#    $ git remote add origin https://github.com/rorysterley/<repo name>.git
+#    $ git push -u origin master
+###############################################################
+
+Do This ##################-SSH-###############################
+#    $ git remote add origin git@github.com:rorysterley/<repo name>.git     #
+#    $ git push -u origin master                                            #
+#############################################################
+     The “-u” is optional and makes it so next time you run “$ git push” you don’t need <name> and <branch>
+
+
+$ git pull origin master
+
+
+ $ git clone
+          $ git clone <address>
+               Clone the git repo at <address>
+          $ git clone <address> <custom name>
+               Clone the git repo at <address> and calls the local file <custom name> instead of the default name
+
+
+Config
+     $ git config --global user.name”Rory Sterley"
+     $ git config --global user.email “rorysterley@gmail.com"
+     $ git config user.email “spam@example.com”     (overrides the global email and sets this one for this project)
+     $ git config --global color.ui true
+     $ git config --global core.editor <editor name>
+     $ git config --global merge.tool <merge tool name>
+     $ git config --global alias.<alias name> \ "<Long command to alias>"
+          E.x. $ git config --global alias.mygraph \ “log - -pretty=format: ‘%h %s [%an]’ --graph"
+          To Execute the alias now: $ git mygraph
+          Note: you can also alias in your .bashrc file and that is probably what you want to do
+
+Basics
+     $ git init
+     $ git add .
+     $ git status       <alias>  $ gs
+     $ git commit -m “Present tense descriptive message here"
+     $ git commit -am “Message”
+     $ git log
+     $ git diff
+     $ git reset HEAD <file name>
+     $ git checkout --<file name or commit name>
+     $ git reset --soft HEAD^
+
+     $ git remote add origin https://github.com/rorysterley/<repo name>.git
+     $ git remote -v
+     $ git push -u origin master
+     $ git clone <address>
+
+     $ git branch <name>
+
+
+.git/info/exclude
+     Add file/folder names you want got to exclude from mentioning when you run git status.
+     e.g.  add experiments/    to the folder.
+     seems like this follows the same rules as .gitignore so you can do things like .*~ to exclude temporary files
+
+.gitignore
+     It is good practice to ignore log files so…   logs/*.log
+
+
+
+In Depth:
+
+     $ git add
+          $ git add .
+               Add everything starting from current directory
+          $ git add <file name> <file name>
+               Add <file name> and <file name>
+          $ git add css/
+               Add everything in the file css/
+          $ get add css/*.css
+               Add all .css files in css/
+          $ git add *.txt
+               Add all .txt files in curent directory
+          $ git add “*.txt"
+               Add all .txt files in the entire project
+          $ git add --all
+               Add all files
+
+     $ git rm
+          $ git rm <file or folder name>
+               Remove from repository and add that change to the stage. Then just $ git commit -m “Remove <file or folder name>
+          $ git rm --cached <file or folder name>
+               stop tracking a previously tracked file… log logs or something you should not be tracking. a $ git status will say the
+               item has been deleted but you still have it in your local repo, At this point its important to add that file or folder to
+               your .gitignore file and then run $ git add .gitignore    $ git commit -m “Ignore all log files"
+               (Note: it may not be appropriate to track .gitignore files… so look into that.)
+
+     $ git diff
+          $ git diff
+               Show difference between last commit and unstated files
+          $ git diff --staged
+               Show difference between staged files and last commit
+          $ git diff HEAD^
+               Get the diff of last commit. …^^ would go back one further and …^^^ one more after that
+          $ git diff HEAD~5
+               Get last 5 (or maybe 6) diff commit info
+          $ git diff <sha> <sha>
+               Get diff between commit <sha> and commit <sha>. Everything in-between inclusive.
+
+
+     $ git blame <file name> --date short
+          Get the revision history and who dun it for the given file.
+
+
+     $ git commit
+          $ git commit -m “message"
+               Commit with message
+          $ git commit -am “message"
+               Add all TRACKED files to the stage then commit them with “message"
+          $ git commit --amend -m “new message"
+               Add/update info from stage to last commit and update message with “new message"
+
+
+     $ git reset
+          $ git reset HEAD <file name>
+               Un-stages the file
+          $ git reset --soft HEAD^
+               Undo the last commit, moving everything from that commit back into staging
+          $ git reset --hard HEAD^
+               Undo last commit and discard all its changes… they don’t go back to staging
+          $ git reset --hard HEAD^^
+               Undo last 2 commits and discard all there changes… they don’t go back to staging
+
+
+     $ git remote
+          $ git remote add origin git@github.com:rorysterley/<repo name>.git
+          $ git remote add <name> <address>
+               Add a remote git repo to this repository
+          $ git remote -v
+               List what repositories git knows about
+          $ git remote rm <name>
+               Remove <name> remote from project
+          $ git remote show <repo name>
+               Show tones of up to date data bout <repo name> and what it merges with in the repo and so on.
+               E.x.   $ git remote show origin
+          $ git remote prune origin
+               Clean up deleted remote branches… (comes in handy in group context) more research needed
+               This is a command you will want to run from time to time when on large group projects.
+               I think it updates my local repositories knowledge of remotely tracked branches that someone else deleted
+
+
+     $ git push
+          $ git push -u origin master
+          $ git push -u <name> <branch>
+               Push local content to remote
+               The “-u” is optional and makes it so next time you run “$ git push” you don’t need <name> and <branch>
+               E.g. “-u” sets the default location for $ git push
+          $ git push origin <branch name>
+               Push <branch name> to remote origin. (good for backing up branches other than master.
+               Technically the same as some of the above examples but good to see practical uses.
+          $ git push origin :<remote branch name>
+               Delete <remote branch name>   (note: you will still have your local copy of that branch)
+          $ git push tags
+               Push tags to remote repo
+          <<<heroku>>>
+               $ git push heroku master
+
+     $ git checkout
+          $ git checkout <branch name>
+               Checkout <branch name>
+          $ git checkout -- <file> <file>
+               discard current changes and checkout latest commit version of <file>
+               “--“ Ensures that you don’t checkout a branch by mistake
+          $ git checkout -b <branch name>
+               “-b” creates the branch. Thus you can create and checkout all in one step
+
+
+     <<<heroku>>>
+          $ heroku create
+               same as git init but for heroku… then just:
+                    $ git remote add origin <https://github.com/rorysterley/<repo name>.git
+          $ git push heroku master
+               Push to heroku’s master branch
+          $ git push heroku-staging staging:master
+               In this example you push your local staging branch to heroku as the master branch for deployment
+               Heroku only deploys the master branch
+
+
+     $ git clone
+          $ git clone <address>
+               Clone the git repo at <address>
+          $ git clone <address> <custom name>
+               Clone the git repo at <address> and calls the local file <custom name> instead of the default name
+
+
+     $ git branch
+          $ git branch <name>
+               Create a new branch called <name>
+               (Also see $ git checkout -b <branch name> for single line create and checkout)
+          $ git branch
+               Log local branch names (if you have more than one)
+          $ git branch -r
+               Log remote branch names
+               May not log them alive you local data bout the remote is out of date so using ($ git fetch) will safely update your info
+          $ git branch -d <name>
+               Delete branch called <name>
+               To delete remote branches see: $ git push origin :<remote branch name>    (note: you still have local copy of branch)
+          $ git branch -D <name>
+               Where “-d” deletes the branch if all is well, “-D” forcefully deletes the branch even if it has un-merged data
+               Using “-d” will stop you with a warning if you have not merged the branch back in so only use “-D” if you know
+               you want to force delete the branch and loos all non-merged data.
+
+
+     $ git merg
+          $ git merg <name>
+               Merge <name> into currently checked out branch
+               eg. On branch master. $ git merge cat         (Merges cat into master)
+
+
+     $ git tag
+          $ git tag
+               List tags. Can ($ git checkout <tag name>) to checkout the commit with that tag
+          $ git tag -a <tag name> -m <“message”>
+               Tag the currently checked out commit.
+               E.x.  $ git tag -a v0.0.3 -m “version 0.0.3"
+          $ git push --tags
+               Push tags to the remote repo. without this the tags just remain local
+
+     $ git fetch
+          $ git fetch
+               Update local repo with current info about remote without performing any merges
+               This ensures commands like ($ git branch -r) give up to date info
+
+
+     $ git rebase
+          Note: Rebasing can be a bit tricky. You checkout the secondary branch e.g. bug fix and then rebase it onto master
+          $ git rebase <branch to rebase on to>
+               Rebase commits
+               e.x. On branch “bugfix”.   $ git rebase master        (rebaseses master under bugfix then apply bugfix)
+               e.x. continued: now checkout master and merge the freshly rebased “bugfix” branch into master. $ git merge bugfix
+          $ git rebase -i <HEAD~3>
+               Interactively rebase last 3 commits
+          <<<Conflicts>>>
+          $ git rebase --continue
+               After fixing a conflict you continue the rebase
+          $ git rebase --skip
+               Skip the conflict
+          $ git rebase --abort
+               Abort the rebase and go back to just before you ran $ git rebase
+
+
+          REBASE DIAGRAM AND EXPLINATION:
+               REBASE STEP 1 takes place just before MERGE (master merge)
+               The (v#) and (bv#) are version info not branch names… helpful for this diagram
+               REBASE STEP 2: $ git checkout branch master      $ git merge bugfix
+               Because of the rebase, as far as git is concerned bug fix started at v3 not v1.
+               Rebasing has a few more steps / being the sense stuff but this shows the basics
+
+          <--- Awesome diagram was here --->
+
+
+
+          note the 7 commits on MERGE and the 6 total commits on REBASE
+          Basicly rebase makes it so you branch is not based off of v1 where it split off but is based off of v3
+          where it will be joining back in.  e.g. Rebase.
+
+
+
+     $ git log
+          $ git log
+               Show commit logs
+          $ git log --pretty=oneline
+               Show commit logs, one per line
+          $ git log —pretty=format: “<stuff> [stuff] [stuff] [stuff]"
+               Posible options: %ad = author date   %an = author name   %h = ssh hash   %s = subject   %d = ref names
+          $ git log --oneline -p
+               Show patch info about the commits. Things like lines changed added and removed
+          $ git log --oneline --stat
+               Show how many adds and deletes there where
+          $ git log --oneline --graph
+               Show a visual graph of commit history
+          $ git log --since=1.minute.ago --until=2.weeks.ago
+               Specify a time range for the log, lot of options here but the above is an example, can also leave out since or until
+
+
+     $ git stash
+          Note: ex. On branch “test”. stash uncommitted work and switch to master. do some work and come back to
+                          test. But test is exactly where it was at its last commit. Where is my stashed work? Run $ git stashed apply
+          Note: gits stash is a stack of stashes. You can view it with $ git stash list
+          Note: Untracked files will not be stashed. However there is --include-untracked
+          $ git stash
+               Store working directory in a temporary place and restore the state of the last commit
+          $ git stash save [“Optional stash message]
+               Store working directory in a temporary place and restore the state of the last commit
+          $ git stash apply [stash@{#}
+               Restore stashed changes to the commit
+               The [stash@{#} is optional and has to do with the "$ git stash list” info. It Allows you to select a specific stash
+               Note: Dose not erase the given stash from the stash stack. Use “$git stash drop [stash@{#}]" for that.
+          $ git stash list [--stat]
+               View list of all stashed work. Each stash is displayed with a stash@{#} name and a reference to there parent commit
+               With this info you can check out the appropriate commit and restore the numbered stash by name.
+               The [--stat] command includes extra info about each stash
+          $ git stash show [stash@{#}] [--patch]
+               List out details about stashed item.
+               Adding --patch shows file changes
+          $ git stash drop [stash@{#}]
+               Drop the 0th index or [stash@{#}] stash out of the stash stack. ("$ git stashed apply” dose not erase that stash from
+               the stash stack.
+          $ git stash pop
+               Runes a combination of “$ git stash apply” and “$ git stash drop"
+               Note that this will apply the 0th index stash and drop the 0th index stash.
+               Note: In the event of a merge conflict, “$ git stash pop” will not run the “$ git stash drop” command.
+          $ git stash save --keep-index
+               keep the files that are in the staging aria rather than completely reverting to the parent commit
+          $ git stash saved --include-untracked
+               stash even untracked files… like if you just made a new file [Unicorn.html], even though its untracked it gets stashed.
+          $ git stash branch <new branch name> <stash@{#}>
+               In the event that the branch that you stashed some work on got deleted and you needed to restore that stashed work
+               this command would create <new branch name> and then automatically “$ git pop <stash@{#}> into the new branch.
+          $ git stash clear
+               Completely wipes all entry in the stash stack
+
+
+     $ git cherry-pick <hash or tag>
+          Note: Adding “-x” inserts a little history info about where the cherry-picked commit came from. Note that this is only
+                    useful when you cherry-pick from public branches because none else has your local commits.
+          Note: Adding “--signoff” adds info about who cherry-picked the commit.
+          $ git cherry-pick <hash or tag>
+               check out the selected commit and add it to the currently checkout branch
+          $ git cherry-pick --edit <hash or tag>
+               lets you edit the commit message
+          $ git cherry-pick --no-commit <hash> <hash>
+               combines the selected commits into one new commit on the current branch but does not actually commit them.
+               So you will need to then run $ git commit -m "<message>"
+               this this option you can even make some changes and add them before actually committing.
+
+
+
+Rewriting History:
+          Note: including the “-f” command helps to ensure that if the file or thing searched for is not present in a given commit
+                    its absence will not result in a critical fall and terminate the function.
+          Note: If you have to do this more than once you may need an extra “-f” in there somewhere because git has a backup in
+                   .git file and “-f” will force it to overwrite its backup with a new backup.
+                    ex. $ git filter-branch --index-filter 'git rm --cached --ignore-unmatch master_passwords.txt'
+                          $ git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch master_username.txt'
+          $ git filter-branch --tree-filter <shell command>
+               Rerun every commit on this branch applying the given shell command and recommitting in order.
+               Example case: You committed your “passwords.txt” file and that is a big nono. You need to rewrite history
+                                        so there is no trace of that file anywhere. Her is what you do:
+               ex. “$ git filter-branch --tree-filter ‘rm -f passwords.txt’” Doing this checks every commit for passwords.txt and
+               deleats it if found. Then recommits.
+
+          $ git filter-branch --tree-filter <shell command> -- --all
+               Runes the command on EVERY commit in the repo
+               Specifying … --HEAD instead of --all runs the command in only the current branch
+          $ git filter-branch --index-filter <shell command>
+               Note: all commands used here must operate on the staging area… so mostly git commands.
+               ex. $ git filter-branch --index-filter ‘git rm --cached --ignore-unmatch passwords.txt'
+          $ git filter-branch -f --prune-empty -- --all
+               Remove empty commits from history… say you undid everything a given commit added.
+
+Working Together
+     $ git config --global core.autocrlf input
+          automaticly fixes info from windows computers by replacing calf(CarageReturn LineFeed) into LineFeed or /n
+     $ git config --global core.autocrlf true
+          Helps out poor old windows by converting all LF (/n) to CRLF (CarageReturn LineFeed) When you checkout the file
+     $ git config --global core.autocrlf false
+          Set to false when everyone is on Windows or Everyone is on Mac/Linux/IsARealDev
+
+     .gitattributes
+          text=auto
+               Note: choose automatically
+          text
+               Note: Convert to OS specific on checkout, convert back to LF on commit
+          text eol=crlf
+               Note: eol(End Of Line)    calf(CarageReturnLineFeed)
+               Note: specify what to do with line endings… calf
+          text eol=lf
+               Note: same as above except “LF"
+          binary
+               Note: Not going to change anything
+
+          Example Default settings:
+               * text=auto
+                     Note: auto convert (*) all files
+               *.html text
+               *.css   text
+                    Note: make sure all .html and .css files are treated as text. not needed if using * text=auto
+               *.jpg binary
+               *.png binary
+                    Note: make sure your image files are not altered
+               *.sh text eol=lf
+               *.bat text eol=crlf
+                    Note: Makes sure all shell(.sh) files do not have garage returns in them. but batch(.bat) files(windows) have CFLF
+
+
