@@ -1,0 +1,133 @@
+////// ClintonJNelson - Notes on Git ///////
+// New things I learned
+
+
+$ git remote add upstream <masterGithubDirectoryLink>  // Sync your clone to the Owner's master repository. Not sure the broad ramifications or possible complications of this.
+
+$ git config -l | sort  // Sorts your configs
+
+$ git init  // Create a new repository.
+            // Repository is place where you can story history of files.
+
+master x $  // there's really no $ for this. Master tells you the branch, and the x says: Differences or things in staging area. Check says: nothing different & nothing in the staging area.
+
+$ git st  // same as git status. "A" means "added". "M" means modified. "??" means untracked item.
+
+$ git rm --cached <filename>  // how to un-track things.
+
+$ git commit -m "message"  // how to commit a file to version control. This takes it out of the staging area and makes a "commit" of this version. Each commit has an ID (abbreviated in the output). Has a timestamp & message too. Records ALL CHANGES (differences). The author's signature (username & signature).
+      // Use PRESENT TENSE for your message
+
+$ git br  //short for branch
+
+$ git
+
+$ git ci -m "message"  // alias for commit
+
+$ git log   // history of what you've done. Lists all of your messages. Like the status of all commits.
+
+$ git ll    // gives long version of log
+
+$ git la    // lists the changes.
+
+$ git checkout -- <file>  // can discard changes to any file in the staging area. Discards from the last tracked state.
+
+Modified/Add/Commit Cycle in Git
+
+$ git blame <filename>  // This says who is to blame for what was done - tells author of each line of text.
+
+// Can close an issue from the commit message by using specific commenting format. Close #224 will create links & manage GitHub from command line.
+
+// Create an ISSUE any time you want to fix a bug!
+
+
+Git LABELS
+  HEAD - always points to place in time you're currently looking at.
+  MASTER - it's the label of the core branch. Fish prompt will show what branch it's at.
+  BRANCH -  is a label pointing to a place in time. Adds a label to the current commit. All commits will be associated with new branch at the time it was committed.
+
+Checking out a branch makes it "active", but doesn't change where things are pointing. After commit, master stays same, but HEAD & ActiveBranch moves; this is so can change one branch without affecting another. When checkout master again, it then moves HEAD label to there. If checkout branch again, HEAD label now points there. Can also see how far ahead you are in the git logs under the branch - it will list the commits. HEAD moves around to current, but MASTER always stays.
+
+$ git branch -d <branchname>  // remove branch
+
+// In Git, there is NO central repository
+
+
+
+Git - REMOTES
+  Give online repository the same name as your directory folder
+
+  ORIGIN is the name we refer to as the central repository. Github acts as one of these. This is just a label. It's a remote label. It labels the URL, so we don't have to remember the URL itself.
+
+$ git push origin master    // pushes TO the ORIGIN's MASTER. It pushes the stuff in whatever BRANCH you're in. It only sends the timeline. To push a branch to a branch, be IN the branch you want, and tell it to send to the same-named ORIGIN BRANCH.
+
+$ git push -u origin <newBranch>   // "-u" sets this up as the default tracking/pushing branch, so can in future just type "git push". DO THIS WHEN YOU PUSH TO A NEW TRACKING BRANCH ON GITHUB. This creates a matching branch name on the GitHub.
+
+
+
+
+GitHub - PULL REQUESTS
+  // Let manager know work is ready for review.
+  // Provide a discussion for code before merging.
+  Pulling the Long Way: First(left) should be master (where you want things merged INTO), and second(right) should be the NewBranch (what you want added - aka FROM) pulling against. Then you'll add a title (defaults to the recent commmit message), and you can also leave a comment about why want it merged into master.
+
+Either merge Locally OR merge on github then Pull it back down to your machine. If working with other people, DO IT ALL ON GITHUB & PULL DOWN. On a team project, DO NOT merge on your own machine.
+
+What do you do if someone updates master ahead of you?! You need "git rebase"
+  $ git pull  // when on MASTER
+  $ git checkout feature-branch
+  $ git rebase master  //Rebase current active branch with the current baster. Moves the branch off of the current master instead of the prior master branch.
+  $ git push -f   // "-f" we're changing the history of the current feature branch
+
+
+
+ISSUES
+  // Prefix issue BRANCHes with the issue number like: 42_git_notes
+  // prefixing all of these branches makes it easy to delete them after without worry!
+
+
+
+// After merge on Github, then need to pull down the new master to local comp. This updates the master.
+// Then delete the old branch
+
+
+
+PULL COMMAND
+  // Combo of a fetch & a merge
+      // fetches new commits
+      // merges them into the new branch
+
+
+Keep fork up to date with the origin
+  // clone it
+  // git remote add upstream <pasteOrigin>    //Then you push Node's changes to the origin.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
