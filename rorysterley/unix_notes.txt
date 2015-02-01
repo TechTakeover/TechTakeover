@@ -127,3 +127,9 @@ Chain of Commands
 >> append to end of file via standard input
 (These methods can create files if they don't exist)
 
+====================
+Searching in the terminal
+
+in a man page type '/'
+  this enables search mode. Type your search term and press enter.
+  then press 'n' to go to the next instance of your search term.
