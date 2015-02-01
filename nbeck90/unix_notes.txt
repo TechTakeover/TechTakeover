@@ -1,0 +1,83 @@
+a '.' before a file indicates that it is hidden. .git is one of these files.
+ - It is made when you create a repository.
+
+less moving_around.txt
+ - opens txt and then uses that as the input to 'less'
+
+ls
+ - lists the current files in your pwd
+
+ll > ll.txt
+ - write the output the the file name on the right
+
+open moving_around.txt
+ - open that file that's in the pwd
+
+history > moving_around.txt
+ - prints the history to a file named 'moving_around.txt'
+
+cd
+ - change drive
+
+pwd
+ - present working drive
+
+history | less
+ - pipes history into less
+
+../
+ - move upwards one drive
+
+history
+ - lists everything you have typed
+
+subl thing.py
+ - opens a file in Sublime called 'thing.py'
+
+subl
+ - opens Sublime
+
+ls ~
+ - lists the files in you home directory
+
+Desktop/Python/Website/css/
+ - move a bunch of directories down in one line
+
+cd /Users/nbeck/
+ - changes to the specific drive
+
+../../
+ - move 2 drives up
+
+ Git/Unix Workshop
+
+Don’t supply a path?
+
+
+Home Directory: /Users/nbeck
+
+cd /
+takes you to the root, every file leads from here (topmost)
+Absolute path starts with a / (no ambiguity)
+Generally, never delete anything from the root
+
+ls
+lists contents
+pink - links
+blue - folder
+red - programs
+ls -t (sorts by modification date, top down)
+ls -l (sorts alphabetically, long format)
+-r (reverses)
+
+man
+manual!
+
+relative paths, as in, relative to where you are currently
+
+.. means go up one directory
+. tells you this current directory right now
+subl . will open up your current directory in Sublime
+
+ SOLO PROJECT GIT MERGE
+TEAM PORJECT PULL REQUEST
