@@ -1,0 +1,12 @@
+I have learned oodles about git. 
+For example…..
+
+git add —— Adds the file from workspace to the staging area.
+
+git commit -m “”  ——— commits the file in the staging area to the .git directory(repository)
+
+git push —— will push this from the .git repository to github. You can either have your repo address saved in your system. Or you can simply do a ‘git push ‘url of your repo’’ and that will send it to your Repository. At this point you will need to put in your username and password.
+
+git diff will show the changes between the index and tree.
+
+git status will show which files are in the staging area or have been modified and need to be added. 
