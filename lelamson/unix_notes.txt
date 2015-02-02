@@ -1,0 +1,3 @@
+cd [no augments] - changes to local home directory
+la - modified shell that shows all contects of directory
+> - output of the command moves to iput of file

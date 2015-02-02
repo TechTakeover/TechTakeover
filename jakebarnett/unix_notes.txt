@@ -1,0 +1,12 @@
+man - shows manual for any command
+touch file_name - creates new file or updates timestamp on existing
+history - prints history
+cat moving_around.txt - reads and outputs file
+history > moving_around.txt - redirects history into a file
+pwd - print working directory
+cd - changes directory
+ls - lists content of directoy
+ll - long format list of directory
+ls -G - shows colored list
+. - current directory
+.. - move up one directory

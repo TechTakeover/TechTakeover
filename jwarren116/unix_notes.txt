@@ -1,0 +1,9 @@
+chmod ugo+rwx file: Changes permissions on a file (I knew the command, but never really knew how to use it! It's great!)
+chown user file: Changes owner of a file
+top: Real time process monitoring. Cool!!
+ps: Handy processes snapshot.
+Grep: Extremely handy search command to use in conjunction with other commands.
+|: Called pipe, and 'pipes' one process into another process. IE: 'ps | grep nano' finds nano in the ps output and displays accordingly.
+^z: Pauses processes, 'fg' restores them.
+VARIABLE=value: Sets local variables.
+env: View variables.

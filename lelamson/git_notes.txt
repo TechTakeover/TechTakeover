@@ -1,0 +1,3 @@
+git branch - displays branches or creates branch
+git pull - pulls information from github
+man git-rebase - to read manual for rebase command

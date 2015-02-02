@@ -1,0 +1,135 @@
+Unix
+##############
+
+
+General
+=======
+Multi process
+Multi user
+Released in 1973
+BSD - Berkeley Software Distribution
+
+GNU (Richard Stallman) ... GNU/Linux (Linus Torvalds)
+  - Open source
+
+REPL: A Unix shell works like a read-evaluate-print loop or REPL
+
+Helpful commands:
+  - which <command>
+    -this will tell you where a given command is installed
+    Example: $ which brew
+
+
+Traits  (The Unix Philosophy)
+======
+Data as plain text files
+Nested subdirectories
+Many Small Programs
+Input-Output Redirection  ( <  > | )
+
+
+Unix Kernel
+===========
+Kernel - The base of the OS - A program that manages the system hardware
+
+  User:     | Other Programs
+  OS:       | Kernel
+  Hardware: | CPU, Memory, Devices...
+
+  Safe from hackers: Require administrative password to update Kernel
+
+
+Unix Shell
+==========
+User interface to the Kernel
+  - command line interface (Original UI)
+  - Graphical User Interface (GUI)
+  - Multi-Touch User Interfaces (Fingers...)
+  - Audible User Interface (Talk to it)
+  (These are all shells)
+
+
+Terminal
+========
+Emulator: Terminal is an app that will run your shell
+
+
+Homebrew
+========
+Package Manager
+Installed at /usr/local
+Installs binarys to /usr/local/bin
+
+
+Command Line
+============
+
+Notation formating:
+  [some stuff] Optional commands
+  <Required Stuff> Required Info
+
+
+Relative path: Does not begin with a '/'
+Absolute path: Starts with '/'
+
+'/' Root: The start of the file system
+'~' Home: Shorthand to your home directory
+cd <absolute or relative path>  (changes directory)
+ls  list what is in the current directory
+   -t   lists by time (last modified)
+   -h   makes file size human readable
+   -r   revers order
+   -a   shows hidden files (.)
+   -x   prints info horizontally
+touch  (updattes time stamp on files and creates them if they don't exist)
+In fish:
+la = ls -lah     and possibly some more stuff
+
+
+Note: Escape a space '\ '
+    ex: cd ~/My Pics    ERROR: ~/My does not exist
+        cd ~/My\ Pics
+
+Case Sensitivity
+================
+
+Linux IS case sensitive
+OSX & Windows are case insensitive (They are NOT case sensitive)
+
+write all your file names in lowercase and NO spaces
+
+
+Cutting Corners
+===============
+use relative directory when navigating
+. represents the current directory
+.. represents one level up
+~ (tilde) shortcut to home
+cd (with no arguments or path will shortcut you to home)
+
+
+PATH
+====
+Path reads directly to its directorys not to subdirectories
+    If /usr/local/bin is in $PATH:
+  eg: /usr/local/bin
+      /usr/local/bin/testfolder  (will not read rom test folder)
+
+Chain of Commands
+=================
+
+| (pipe) Takes the output of command (a) and pipes it to the input of
+  command (b).
+
+> overwrite to standard input
+    The redirection operator (>) sends the output of the command on the left side tot he input of the command on the right side.
+< overwrite to standard output
+>> append to end of file via standard input
+(These methods can create files if they don't exist)
+
+====================
+Searching in the terminal
+
+in a man page type '/'
+  this enables search mode. Type your search term and press enter.
+  then press 'n' to go to the next instance of your search term.

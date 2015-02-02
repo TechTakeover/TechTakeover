@@ -1,0 +1,9 @@
+git add file_name - add file to staging area
+git status - status of staging area
+git commit -m'notes notes notes' - commits files in staging area
+git log - shows all commits
+git la- long notes on commit
+
+git branch - lists branch
+git branch branch-name - creates new branch in repo
+git checkout branch-name - switches branches

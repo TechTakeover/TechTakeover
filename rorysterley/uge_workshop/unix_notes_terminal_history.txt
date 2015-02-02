@@ -1,0 +1,275 @@
+cd Desktop/            (Change directory)
+history | less         (Pipe console history to less for viewing)
+claer                  (clear out all the clutter)
+history 5              (Testing if history can be limited by # (No))
+history                (More fun with history)
+histery                (Embarrassing typo)
+echo $PATH             (Checking the value of $PATH)
+lsla
+lsl
+cd /User
+c                      (Testing to see if 'c' was a command)
+cd
+la
+man ls
+mn ls
+ls -rl
+ls rl
+ls -lh
+ls -h
+ll
+ls -lt
+ls
+cd /
+pwd
+git config -l | sort
+git config -l
+git --version
+git -- version
+which brew
+which homebrew
+brew inclear
+echo $SHELL
+brew doctor
+brew update
+ls -G
+git push origin master
+gs
+git c 'Fix formating'
+git add .
+mv dore_code.txt door_code.txt
+man mv
+subl dore_code.txt
+touch dore_code.txt
+thouch dore_code.txt
+cd Documents/Code\ Fellows/
+subl .
+subl
+cd sea-w24-uge/
+cd repos/codefellows/
+git ll
+git c 'init personal folder rorysterley'
+subl .config/fish
+lear
+open .config/fish/
+open .config
+subl .config/fish/config.fish
+git status
+git help add
+vim
+xcode
+subl evernote_git_basics.txt
+touch evernote_git_basics.txt
+rm git_evernotes.txt
+touch git_evernotes.txt
+touch git_notes.txt
+touch unix_notes.txt
+cd rorysterley/
+mkdir rorysterley
+git clone git@github.com:rorysterley/sea-w24-uge.git
+subl test.txt
+grep test.txt
+grep this > test.txt
+grep this test.txt
+grep -n this test.txt
+touch test.txt
+cd Desktop/test/
+find / -name bin/bash
+find . -name .bashrc
+man find
+which echo
+bash
+bsh
+exit
+MESSAGE="hello world"
+vim .config/fish/config.fish
+env | grep PS1
+chsh -s /usr/local/bin/bash
+chsh /usr/local/bin/bash
+env
+echo $PS1
+echo $HOME
+echo $home
+env | grep fish
+fg
+fg %1
+vimtutor
+man vim
+man fg
+fg -1
+fg [1]
+fg 2
+fg 1
+jobs
+vim newTest.txt
+vim test.txt
+rm test.txt.save
+vim test.txt.save
+cd test/
+mkdir test
+ps -a
+ps
+ps | grep chrome
+ps -aux | grep chrome
+ps -aum | grep chrome
+man ps
+man grep
+pu aux
+top
+!
+!!
+whoami
+curl -fsSL http://git.io/QxUaOQ
+git la
+git st
+st
+cd ~/repos/demos/express-demo/
+curl -fsSL http://git.io/7UHtNA | sh
+git config --global user.email 'royrsterley@gmail.com'
+git config --global user.name 'Rory Sterley'
+brew upgrade
+brew doctor
+brew upgrade git
+brew update git
+cear
+subl /etc/paths
+echo $PAHT
+subl -w .bash_profile
+open .bash_profile
+echo $EDITOR
+lsla .*
+which sh
+wich sh
+word
+chsh -s /usr/local/bin/fish
+chsh -s usr/local/bin/bash
+alias lsla 'ls -la'
+brew install fish
+fish_update_completions
+curl -fsSL http://git.io/FzAR | ruby
+uname
+npm install express
+npm express
+static
+cd test
+node
+subl test
+node test.js
+npm install
+node install
+cd Desktop/testfolder/
+git pull origin HEAD
+git remote add origin git@github.com:rorysterley/simple-chat.git
+git init
+cd testfolder/
+mkdir testfolder
+cd simple-chat/
+cd demos/
+cd repos/
+source ~/.bashrc
+echo "export NODE_PATH=$HOME/.node/lib/node_modules" >> ~/.bashrc
+echo "export PATH=$HOME/.node/bin:$PATH" >> ~/.bashrc
+make && make install
+./configure --prefix=$HOME/.node
+cd node-v0.10.35
+cd node-v0.10.35.tar.gz
+tar xvf node-v0.10.35.tar.gz
+curl -O http://nodejs.org/dist/v0.10.35/node-v0.10.35.tar.gz
+man ./configure
+man curl
+which node && which npm
+sudo rm -rf ~/.npm
+sudo rm -rf ~/.node-gyp
+which node
+sudo rm -rf $(which npm)
+sudo rm -rf $(which node)
+brew uninstall node
+claer
+brew uninstall --force npm
+which npm
+brew uninstall --force node
+which node && wich npm
+wich node
+node -version
+brew node -v
+cd .node-gyp/
+man make
+gcc -v
+open .bashrc
+npm --version
+node --version
+cd configure
+cd ./configure
+open .
+cd /Applications/
+cd /Library/
+/Library/
+java -version
+man java
+java -v
+java --version
+brew search java 8
+brew search java
+brew install git
+cd express-demo/
+cd repos/demos/
+heroku open
+heroku ps:scale web=1
+git push heroku master
+git commit -m "Complete login system"
+git rm js/app.js
+git rm index.html
+git rm css/styles.css
+git remote add origin git@github.com:rorysterley/login-system.git
+heroku ps:scale 1
+heroku create
+node app.js
+npm install express --save
+static public/
+node .
+node public
+node public/
+node public/index.html
+npm install bootstrap
+cd repos/codefellows/login-system/
+cd ..
+cd angular-demo/
+git commit -m "Init"
+npm init
+cd ~
+cd login-system/
+cd todo-list/
+npm install angular
+mkdir login-system
+cd repos/demos/angular-demo/
+git clone --depth=1 https://github.com/angular/angular-seed.git angular-demo
+mkdir angular-demo
+git commit -m "Update license"
+cd repos/demos/simple-chat/
+git push
+git commit -m "Add comments"
+cd repos/codefellows/todo-list/
+git push -u origin master
+git remote add origin git@github.com:rorysterley/public-library.git
+cd public-library/
+git remote add origin git@github.com:rorysterley/todo-list.git
+git commit -m "Add css"
+git commit -m "Update readme"
+cd to-do-list/
+subl todo
+git commit -m "Standardize nomenclature and fix whitespace"
+git rm js/todo.js
+git reset --soft HEAD^
+g
+git commit -m "Write code for to-do list"
+git log
+git commit -m "Add basic structure and dependencies"
+git commit -m "init"
+cd repos/codefellows/todo/
+cd repos/codefellows/public-library/
+git commit -m "add public library"
+git commit -m "Update 'Contributin' in README.md"
+cd repos/demos/express-demo/
+git commit -m "Update Readme with live link"
+cd node-js-getting-started/
+suble node-js-getting-started/
