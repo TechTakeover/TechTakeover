@@ -1,0 +1,78 @@
+Additional Notes 1
+
+Why Unix?
+
+-more compatible
+-most apps use unix
+
+
+What’s unix?
+-it is an operating system
+-multi process
+-multi user
+-released in 1973
+-multi platform software
+-most popular version (Darwin - used by OS X), (Linux - used by Android)
+
+Most Common Unix traits (Unix Philosophy)
+-Data as Plaintext files
+-Nested Subdirectories
+-many small programs
+-input~output redirection (input can come some place other than the keyboard, output can be sent somewhere other than the screen)
+Example:
+An event history can be sent to the screen for display or saved to a log file.
+
+Unix Kernel
+-A program which manages the hardware
+-generally safe from hackers
+
+Unix Shell
+-A program which provides the user interface for the unix kernel
+-the original UI is a command line interpreter
+-Modern OS uses a more graphical UI shell
+-More modern OS use Multi touch UI shell
+-Another is Audible shell (Cortana for windows, Siri for Apple)
+-Manages the details on handling of the details between the different apps
+
+UNIX Command Line
+A path is absolute when it starts with /
+A path is relative when it doesn’t start with a /
+
+
+Unix Commands
+$ ls
+shows the list of files in that current directory
+
+$ ls -t
+-t flag sorts the files by the most recent modified
+
+$ls -l
+show list in long format
+
+$ history
+show history of commands executed in terminal
+
+$ history | less
+show history of commands executed in terminal with paging options (Enter - one line at a time, space - one screen at a time)
+
+CONCEPT : Piping
+
+The pipe (|) can chain commands as the output of one command and be the input of another command
+
+EXAMPLE: $ history | sort | less
+
+CONCEPT: Saving History into a file (Redirection)
+-use the redirection symbol (>) to overwrite into a new or existing file, if no file exists,
+
+- one arrow (>) to create/overwrite, two arrows (>>) to append
+
+$ history > moving_around.txt
+
+COMMAND mv
+-can be used to move files from one path to a target path
+
+$ mv <current path> <file name> <target path> <target file name>
+
+
+git init :initializes a new repository on the current working folder
+git add  :adds files to the staging area
