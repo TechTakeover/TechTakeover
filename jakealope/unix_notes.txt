@@ -1,0 +1,20 @@
+I have also learned a lot about unix and its many commands. 
+
+
+cd —— will take me to my root directory. 
+
+cd .. —— will take me back one in my directory
+
+mkdir dirname —— will make a new directory named dirname
+
+touch filename —— will make a new file named filename
+
+cd Python/ —— will take me one step to the directory named Python
+
+ls ——— will list the files/ folders in the directory I am in. 
+
+ls -la —— will not only list the files/folders, but will do it vertically with full info
+
+mv —— can be used for moving files, but also renaming if you put in mv <filename> <newfilename>
+
+rm —— will remove the file.
