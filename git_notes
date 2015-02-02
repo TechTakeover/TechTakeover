@@ -10,7 +10,7 @@ git add. (adds everything from current directory)
 
 makes a commit| ID, Message, Timestamp, Differences, Signature
 
-git commit -m 'Message' (commits files with message)
+git commit 'Message' (commits files with message)
 
 Red X (something untracked or in staging area)
 Green Check (nothing in staging area or untracked files)
