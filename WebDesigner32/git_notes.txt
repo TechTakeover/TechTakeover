@@ -1,0 +1,12 @@
+We learned a great deal about Git. Git is a distributed version control system. Nearly all my notes are on paper, so I will try to summarize or condense my learning here. With Git, whenever you have a big change or new idea to implement in your project it is good to create a new branch so as not to effect the master branch which is the final version of the app made available to all. The master is sort of the root structure of everything and if too many changes are made there it can become complex and form problems like bugs. When you have a new branch and you have made your changes you typically need a team member to approve your changes and so you need to push those changes to Github so a team member can initiate a pull request and confirm the changes. Once confirmed you want to pull from Github making sure to delete the branch there. Finally, you can edit these changes in the terminal and then update the master branch. Some important declarations to know in Git are:
+
+git init
+git status
+git add <file>
+git commit
+git push
+git branch
+git checkout
+git pull
+git log
+git config
