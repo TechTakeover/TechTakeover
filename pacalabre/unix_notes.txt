@@ -1,0 +1,17 @@
+
+
+
+
+
+kernel - manages the hardware.
+
+					other programs
+						|
+						kenel
+						|
+					cpu    memory   devices	
+
+ Safe from hackers. 
+
+Unix Shell - another program on your computer whose job is to be a user interface for the kernel.
+command line (terminal), then graphical user interface(screen), audible user interface(siri). These are all shells.

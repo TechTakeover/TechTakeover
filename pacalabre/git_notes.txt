@@ -1,0 +1,44 @@
+
+
+pwd - tells you where you are in the directory
+
+Path - if starts with a /- absolute
+without / - relative
+
+Home - Users/paulcalabrese
+
+the root - top most container of the computer system.
+
+ls -t  means sort by modification date
+l is the the long flag
+ll - short list
+la - long list
+ls -lt means list by modification time
+ls-r does a reverse order
+command “man ls” is to pull up the manual
+\ indicates spaces
+write all file names in lower case with no spaces
+.. = goes up 1 directory
+cd with no path will take you home 
+.  indicating that you are referencing the directory that you are currently in.
+
+less command - allows user to control movement as the input to another.
+pipe or “|” can chain commands to be an input
+> redirector opperator - the output of a command on the left side to the file name on the right hand side. 
+
+git status - to look at the staging area
+git add to add to the staging area
+git commit to commit changes.
+
+history interact with your command line history
+less read large text inpts in a controlled fashion
+mv moves file
+touch updates time stame
+cp copy
+rm remove
+rmdir remove directory
+
+Head - always points to latest
+Master - label that goes to first branch
+you can make a new branch with the branch command, this adds a new label to the current commit.
+
