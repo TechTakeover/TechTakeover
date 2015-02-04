@@ -1,0 +1,5 @@
+-Unix shows data as plain text
+-Path (current "address" in the terminal)
+-a path can be relative or absolute
+-pwd (current path)
+-uses shells to provide UI
