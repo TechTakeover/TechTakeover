@@ -1,0 +1,3 @@
+-files move from the staging area to branches
+-only init a repo once
+-git checkout (switches current branch)

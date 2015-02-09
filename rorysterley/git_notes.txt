@@ -1,0 +1,68 @@
+ Git
+=====
+
+Distributed Version Control System (VCS)
+
+================================================
+=   MAN PAGES NOTE ------------------!!!!!!!!!!
+=
+=   $ man git
+=   $ man git-config   (NOT: $ man git -config)
+================================================
+
+If you are pulling a repo you don't need to run $ git init
+
+
+Commands:
+=========
+git add <file>
+git add .     (adds everything in the current directory and sub-directory)
+
+git rm --cached <file>          (un-stage a file)
+
+git branch    (lists all branches)
+git branch <name>  (create <name> branch)
+
+
+
+
+aliases:
+========
+git ll   (long version of log history)
+git la   (Long listing with everything ****   (:   ))
+
+
+
+Commit
+=======
+ID
+Messages
+Time stamp
+diff
+signature
+
+Commit Command
+==============
+The commit message
+  Present tense
+  Short and to the point
+
+
+to delete your history just delete the .git folder and re initalize.
+  Note: wont effect cloud files like GitHub
+
+How To Git:
+Modify Add Commit
+
+
+===============================================================================
+
+Labels
+======
+HEAD (points to the most resent commit or the checkout branch)
+master (The master branch)
+git-notes (a branch)
+
+For more detailed notes see: 'evernote_git_basics.txt' in this same folder.
+
+Now go play with the Octocat!

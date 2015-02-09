@@ -1,0 +1,4 @@
+git checkout -b <new branch name>: create and switch to new branch in one command.
+git stash: stashes current uncommited work so you can checkout another branch (or something that would lose the uncommited work) and still return to that work later.
+
+Not entirely from the Git Basics Course, but I recently learned that you cannot push a master branch to a remote master branch that's currently checked out (like with a webserver). You need to push an "update" branch, and then merge them server side!

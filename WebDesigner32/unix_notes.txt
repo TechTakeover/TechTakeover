@@ -1,0 +1,3 @@
+UNIX is a multitasking multiuser operating system that was developed in the 1970s. We use UNIX when we run OS X on Macs, such as in my case. UNIX is flexible and has helped to create a standard for web-developers.
+
+Note: I did more listening in the beginning because I am getting used to using a MacBook Pro and taking notes in Pages was difficult given the pace, so I started taking notes on paper in the last half of class...
