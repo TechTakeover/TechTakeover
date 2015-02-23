@@ -1,0 +1,4 @@
+git init (initialize git folder)
+git add (add files to staging area)
+git commit (commit files)
+git push (push commits)
